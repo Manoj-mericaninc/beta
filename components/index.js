@@ -1,4 +1,5 @@
 import SubMenu from "./submenu.component";
-import BusinessInformation from "./bussiness-information.component";
+import BusinessInformation from "./business-information.component";
+import BillingAddress from "./billing-address.component";
 
-export { SubMenu, BusinessInformation };
+export { SubMenu, BusinessInformation, BillingAddress };
