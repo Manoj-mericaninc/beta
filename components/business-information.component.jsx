@@ -1,7 +1,11 @@
 import React from "react";
 
 const BusinessInformation = () => {
-  return <div>BusinessInformation</div>;
+  return (
+    <div>
+      <h2>Business Information</h2>
+    </div>
+  );
 };
 
 export default BusinessInformation;
