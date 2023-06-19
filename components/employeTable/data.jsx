@@ -1,4 +1,4 @@
-import { AiOutlineEdit } from "react-icons/ai";
+import{AiOutlineEdit} from "react-icons/ai"
 import { FiUserPlus } from "react-icons/fi";
 
 const rows = [
