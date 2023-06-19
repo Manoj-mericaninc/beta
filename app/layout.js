@@ -1,5 +1,5 @@
-import '@/styles/globals.css';
-
+import { Navigation } from '@/components';
+import '@/styles/global.css';
 export const metadata = {
   title: 'Zen Time',
   description: 'Zen Time application to manage time sheets',
@@ -15,7 +15,10 @@ export default function RootLayout({ children }) {
           type='image/x-icon'
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <Navigation />
+        {children}
+      </body>
     </html>
   );
 }
