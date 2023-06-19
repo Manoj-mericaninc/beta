@@ -1,4 +1,4 @@
-import { TableContextProvider } from '@/components/tableContext/tableContext';
+import { Navigation } from '@/components';
 import '@/styles/global.css';
 export const metadata = {
   title: 'Zen Time',
@@ -16,8 +16,8 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        {' '}
-        <TableContextProvider>{children}</TableContextProvider>
+        <Navigation />
+        {children}
       </body>
     </html>
   );
