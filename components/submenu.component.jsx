@@ -38,7 +38,7 @@ const SubMenu = ({ message, address }) => {
       </div>
       <div className=" flex text-sm shadow-lg w-screen cursor-pointer ">
         <Link
-          href="/Business"-
+          href="/Business"
           className={`${
             pathname === "/Business"
               ? "text-blue-600 border-b-4 border-blue-600"
