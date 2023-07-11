@@ -7,13 +7,21 @@ import { BsPeopleFill, BsFillPersonFill } from 'react-icons/bs';
 import { FaPeopleCarry, FaFileInvoiceDollar } from 'react-icons/fa';
 import { MdViewTimeline, MdLogout } from 'react-icons/md';
 
+const sidebarItem = [
+  { id: 1, icon: <BsPeopleFill />, text: 'Employees', href: '' },
+  { id: 2, icon: <BsFillPersonFill />, text: 'Clients', href: '' },
+  { id: 3, icon: <FaPeopleCarry />, text: 'Vendors ', href: '' },
+  { id: 4, icon: <MdViewTimeline />, text: '', href: '' },
+  { id: 5, icon: <FaFileInvoiceDollar />, text: '', href: '' },
+];
+
 const SideBar = forwardRef(({ showNav }, ref) => {
   const router = useRouter();
 
   return (
     <div
       ref={ref}
-      className='fixed w-56 h-full bg-white shadow-sm'
+      className='fixed w-56 h-full shadow-lg bg-secondary'
     >
       <div className='flex justify-center mt-6 mb-14'>
         <picture>
