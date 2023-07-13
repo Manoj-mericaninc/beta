@@ -2,6 +2,7 @@
 
 import { forwardRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { BsPeopleFill, BsFillPersonFill } from 'react-icons/bs';
 import { FaPeopleCarry, FaFileInvoiceDollar } from 'react-icons/fa';
@@ -24,13 +25,12 @@ const SideBar = forwardRef(({ showNav }, ref) => {
       className='fixed w-56 h-full shadow-lg bg-secondary'
     >
       <div className='flex justify-center mt-6 mb-14'>
-        <picture>
-          <img
-            className='w-32 h-auto'
-            src=''
-            alt='company logo'
-          />
-        </picture>
+        <Image
+          src='/assets/images/logo.png'
+          alt='company logo'
+          width={120}
+          height={30}
+        />
       </div>
 
       <div className='flex flex-col'>

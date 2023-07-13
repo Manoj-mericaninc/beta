@@ -1,7 +1,7 @@
-import React from 'react';
+import { ClientInput, ClientInformation } from '@/components/clientInput';
 
-const Clients = () => {
-  return <div>Clients</div>;
+const page = () => {
+  return <ClientInput />;
 };
 
-export default Clients;
+export default page;

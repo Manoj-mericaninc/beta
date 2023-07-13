@@ -6,7 +6,7 @@ import { schemaForBussinessInfo } from '@/schema';
 import { CgArrowLongRight } from 'react-icons/cg';
 import { useState } from 'react';
 
-const BussinessInfoInputComponent = () => {
+const ClientInput = () => {
   const [jobTerminationNotice, setJobTerminationNotice] = useState('');
   const [clientStatus, setClientStatus] = useState('');
   const [clientCategory, setClientCategory] = useState('');
@@ -469,7 +469,7 @@ const BussinessInfoInputComponent = () => {
 
             <Select
               id='clientCategory'
-              className='w-full max-w-xs  join-item'
+              className='w-full max-w-xs join-item'
               options={clientCategoryOptions}
               placeholder={'Client Category'}
               isSearchable={true}
@@ -560,4 +560,4 @@ const BussinessInfoInputComponent = () => {
   );
 };
 
-export default BussinessInfoInputComponent;
+export default ClientInput;

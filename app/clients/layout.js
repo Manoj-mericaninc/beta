@@ -5,7 +5,7 @@ export const metadata = {
   description: 'Zen Time application to manage time sheets',
 };
 
-export default function RootLayout({ children }) {
+const ClientLayout = ({ children }) => {
   return (
     <html lang='en'>
       <head>
@@ -15,7 +15,12 @@ export default function RootLayout({ children }) {
           type='image/x-icon'
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <Navigation />
+        {children}
+      </body>
     </html>
   );
-}
+};
+
+export default ClientLayout;

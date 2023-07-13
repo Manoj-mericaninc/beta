@@ -1,2 +1,2 @@
-import ClientTable from "./clientTable.component.jsx";
+import ClientTable from './clientTable.component';
 export { ClientTable };

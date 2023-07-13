@@ -1,93 +1,110 @@
 'use client';
+import Image from 'next/image';
 import Link from 'next/link';
 
-const Login = (props) => {
-  const { signIn, email, Password, buttonText } = props;
-
+const Login = () => {
   return (
-    <div className="flex justify-center items-center h-screen w-screen bg-[url('https://wallpaper.dog/large/11027692.jpg')] bg-center bg-no-repeat bg-cover">
-      <div className='sm:mx-auto sm:w-full sm:max-w-sm  p-10 rounded-xl  backdrop-blur-[2px] bg-white/5 border-2 border-slate-300'>
-        <h2 className='mb-8 text-2xl font-bold leading-9 tracking-tight text-center text-gray-700'>
-          {signIn}
-        </h2>
+    <section class='flex flex-col md:flex-row h-screen items-center'>
+      <div class='bg-blue-600 hidden lg:block w-full md:w-1/2 xl:w-2/3 h-screen'>
+        <Image
+          src='/assets/images/auth.jpg'
+          alt='auth time'
+          class='w-full h-full object-cover'
+          width={700}
+          height={500}
+        />
+      </div>
 
-        <form className='space-y-6'>
-          <div>
-            <label
-              htmlFor='email'
-              className='block text-sm font-medium leading-6 text-gray-800'
-            >
-              {email}
-            </label>
-            <div className='mt-2'>
+      <div
+        class='w-full md:max-w-md lg:max-w-full md:mx-auto mx-0 md:w-1/2 xl:w-1/3 h-screen px-6 lg:px-16 xl:px-12
+          flex items-center justify-center bg-secondary'
+      >
+        <div class='w-full h-100'>
+          <h1 class='text-xl font-bold text-primary'>Welcome Back</h1>
+          <h2 class='text-xl md:text-2xl font-bold leading-tight mt-12 text-primary'>
+            Log in to your account
+          </h2>
+
+          <form
+            class='mt-6'
+            action='#'
+            method='POST'
+          >
+            <div>
+              <label class='block text-gray-700'>Email Address</label>
               <input
-                id='email'
-                name='email'
                 type='email'
-                autoComplete='email'
+                name=''
+                id=''
+                placeholder='Enter Email Address'
+                class='w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none shadow-md text-lg font-medium text-primary'
+                autofocus
+                autocomplete
                 required
-                className='block w-full rounded-md border-0 py-1.5  text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400  focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
               />
             </div>
-          </div>
 
-          <div>
-            <div className='flex items-center justify-between'>
-              <label
-                htmlFor='password'
-                className='block text-sm font-medium leading-6 text-gray-700'
-              >
-                {Password}
-              </label>
-            </div>
-            <div className='mt-2'>
+            <div class='mt-4'>
+              <label class='block text-gray-700'>Password</label>
               <input
-                id='password'
-                name='password'
                 type='password'
-                autoComplete='current-password'
+                name=''
+                id=''
+                placeholder='Enter Password'
+                minlength='6'
+                class='w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
+                  focus:bg-white focus:outline-none  shadow-md text-lg font-medium text-primary'
                 required
-                className='block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
               />
             </div>
-          </div>
 
-          <div>
+            <div class='text-right mt-2'>
+              <a
+                href='#'
+                class='text-sm font-semibold text-gray-700 hover:text-blue-700 focus:text-blue-700'
+              >
+                Forgot Password?
+              </a>
+            </div>
+
             <button
               type='submit'
-              className='flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
+              class='w-full block bg-blue-500 hover:bg-blue-400 focus:bg-blue-400 text-white font-semibold rounded-lg
+                px-4 py-3 mt-6'
             >
-              {buttonText}
+              Log In
             </button>
-          </div>
-        </form>
+          </form>
 
-        <p className='mt-10 text-sm text-center text-gray-500'>
-          <span>
-            Don't have an account?
+          <hr class='my-6 border-gray-300 w-full' />
+
+          <button
+            type='button'
+            class='w-full block bg-white hover:bg-gray-100 focus:bg-gray-100 text-gray-900 font-semibold rounded-lg px-4 py-3 border border-gray-300'
+          >
+            <div class='flex items-center justify-center bg-pro'>
+              <Image
+                src='./assets/images/google.svg'
+                alt='google-icon'
+                width={24}
+                height={24}
+              />
+              <span class='ml-4'>Log in with Google</span>
+            </div>
+          </button>
+
+          <p class='mt-8'>
+            Need an account?
             <Link
               href='/register'
-              className='ml-1 text-blue-600 cursor-pointer'
+              class='text-blue-500 hover:text-blue-700 font-semibold ml-4'
             >
-              SignUp here..
+              Create an account
             </Link>
-          </span>
-          <button
-            aria-label='Continue with google'
-            role='button'
-            className='focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-700 py-3.5 px-4 border rounded-lg border-gray-700 flex items-center w-full mt-6'
-          >
-            <img
-              src='https://tuk-cdn.s3.amazonaws.com/can-uploader/sign_in-svg2.svg'
-              alt='google'
-            />
-            <p className='ml-4 text-base font-medium text-gray-700'>
-              Continue with Google
-            </p>
-          </button>
-        </p>
+          </p>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

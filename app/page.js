@@ -1,5 +1,10 @@
+import { Dashboard } from '@/components/clientInput';
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <div>
+      <Dashboard />
+    </div>
+  );
 };
 
 export default Home;
